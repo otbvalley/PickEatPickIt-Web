@@ -9,8 +9,8 @@ const Button = ({ text, onClick, className = "" }: ButtonProps) => {
     <button
       onClick={onClick}
       className={`
-        px-8 py-4 
-        sm:px-10 sm:py-5 
+        px-6 py-2 
+        sm:px-7 sm:py-5 
         bg-green-600 
         hover:bg-green-700 
         active:bg-green-800
