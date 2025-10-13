@@ -16,6 +16,7 @@ import VendorSignup from "./auth/sigup/VendorSignup";
 import VendorLogin from "./auth/login/VendorLogin";
 import VendorDashboard from "./vendor/dashboard/VendorDashboard";
 import Login from "./user/login/Login";
+import SearchComponent from "./user/component/SearchComponent";
 
 const AppRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const AppRoutes = () => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
       <Route path="/user-dashboard" element={<UserDashboard />} />
+      <Route path="/search" element={<SearchComponent />} />
       {/* vendor */}
 
       <Route path="/vendor-dashboard" element={<VendorDashboard />} />
