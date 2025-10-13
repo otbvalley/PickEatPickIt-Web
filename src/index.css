@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@theme {
+  --font-family-sans: "Open Sans", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.con {
+  background-image: url(./assets/e0ae4f04577eee915f74e1c1c91bebb71715aaed.jpg);
+  width: full;
+  height: 100vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
