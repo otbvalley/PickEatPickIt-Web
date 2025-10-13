@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../../assets/Logo SVG 1.png";
 import { Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
+import Button from "../../component/button";
 const VendorLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -102,10 +103,16 @@ const VendorLogin = () => {
             </Link>
           </p>
         </div>
+
         <Link to="/vendor-dashboard">
           <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors">
             Sign In
           </button>
+        </Link>
+        <Link to="/">
+          <div className="flex items-center justify-center mt-2 cursor-pointer">
+            <Button text="Select Role" />
+          </div>
         </Link>
       </div>
     </div>

@@ -3,6 +3,7 @@ import logo from "../../assets/Logo SVG 1.png";
 import { useState } from "react";
 import { Eye, EyeOff, ChevronDown, Camera, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import Button from "../../component/button";
 // Add this type definition at the top of your file
 type NavigateFunction = (page: string) => void;
 
@@ -173,7 +174,7 @@ const SignUpPage = ({ onNavigate }: PageProps) => {
           <p className="text-[#494949] font-semibold text-sm">
             Already have an account?{" "}
             <Link to="/vendor-login">
-              <button className="text-[#494949] font-extrabold hover:text-green-600">
+              <button className=" cursor-pointer text-[#494949] font-extrabold hover:text-green-600">
                 Sign in
               </button>
             </Link>
@@ -199,11 +200,16 @@ const SignUpPage = ({ onNavigate }: PageProps) => {
         </div>
 
         <button
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors "
+          className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors cursor-pointer "
           onClick={() => onNavigate("login")}
         >
           Sign Up
         </button>
+        <Link to="/">
+          <div className="flex items-center justify-center mt-2 cursor-pointer">
+            <Button text="Select Role" />
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -298,7 +304,7 @@ const LoginPage = ({ onNavigate }: PageProps) => {
             Forget Password?
           </button>
         </div>
-
+        <Button text="Select Role" />
         <div className="text-center mb-6">
           <p className="text-gray-600 text-sm">
             Don't have an account?{" "}
@@ -311,6 +317,11 @@ const LoginPage = ({ onNavigate }: PageProps) => {
           </p>
         </div>
 
+        <Link to="/vendor-signup">
+          <button className="text-gray-900 font-semibold hover:text-green-600">
+            Sign up
+          </button>
+        </Link>
         <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors">
           Sign In
         </button>

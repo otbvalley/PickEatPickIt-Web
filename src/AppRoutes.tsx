@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Select from "./home/Select";
 import { Home } from "./user/home/Home";
 import Signup from "./user/signup/Signup";
-import Login from "./auth/login/VendorLogin";
+// import Login from "./auth/login/VendorLogin";
 import UserDashboard from "./user/user-dashboard/UserDashboard";
 
 import { Rider1 } from "./rider/Rider1";
@@ -15,6 +15,7 @@ import { Rider6 } from "./rider/Rider6";
 import VendorSignup from "./auth/sigup/VendorSignup";
 import VendorLogin from "./auth/login/VendorLogin";
 import VendorDashboard from "./vendor/dashboard/VendorDashboard";
+import Login from "./user/login/Login";
 
 const AppRoutes = () => {
   return (
