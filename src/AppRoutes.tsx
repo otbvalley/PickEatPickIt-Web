@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Select from "./home/Select";
-import { Home } from "./user/home/Home";
+
 import Signup from "./user/signup/Signup";
 // import Login from "./auth/login/VendorLogin";
 import UserDashboard from "./user/user-dashboard/UserDashboard";
@@ -17,6 +17,7 @@ import VendorLogin from "./auth/login/VendorLogin";
 import VendorDashboard from "./vendor/dashboard/VendorDashboard";
 import Login from "./user/login/Login";
 import SearchComponent from "./user/component/SearchComponent";
+import Home from "./user/home/Home";
 
 const AppRoutes = () => {
   return (

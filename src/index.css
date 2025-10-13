@@ -10,10 +10,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .con {
-  background-image: url(./assets/e0ae4f04577eee915f74e1c1c91bebb71715aaed.jpg);
+  background-image: url("https://images.unsplash.com/photo-1576866209830-589e1bfbaa4d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZvb2QlMjBkZWxpdmVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500");
   width: full;
   height: 100vh;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
