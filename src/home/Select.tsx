@@ -15,7 +15,7 @@ export default function Select() {
       label: "Vendor",
       icon: Store,
       description: "Manage your restaurant",
-      row: "/welcome1",
+      row: "/vendor-login",
     },
     {
       label: "Rider",

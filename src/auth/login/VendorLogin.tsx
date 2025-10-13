@@ -96,7 +96,7 @@ const VendorLogin = () => {
         <div className="text-center mb-6">
           <p className="text-gray-600 text-sm">
             Don't have an account?{" "}
-            <Link to="/vendor-signup">
+            <Link to="/welcome1">
               <button className="text-gray-900 font-semibold hover:text-green-600">
                 Sign up
               </button>
