@@ -18,6 +18,9 @@ import VendorDashboard from "./vendor/dashboard/VendorDashboard";
 import Login from "./user/login/Login";
 import SearchComponent from "./user/component/SearchComponent";
 import Home from "./user/home/Home";
+import MArket from "./user/market/MArket";
+import ChatApp from "./user/component/ChatApp";
+import Notification from "./user/component/Notification";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +32,9 @@ const AppRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/user-dashboard" element={<UserDashboard />} />
       <Route path="/search" element={<SearchComponent />} />
+      <Route path="/market" element={<MArket />} />
+      <Route path="/inbox" element={<ChatApp />} />
+      <Route path="/notification" element={<Notification />} />
       {/* vendor */}
 
       <Route path="/vendor-dashboard" element={<VendorDashboard />} />

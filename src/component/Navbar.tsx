@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Home, ShoppingCart, Package, User } from "lucide-react";
+import { Menu, X, Home, ShoppingCart, Package, User, Mail } from "lucide-react";
 import logo from "../assets/Logo SVG 1.png";
 
 export const Navbar = () => {
@@ -12,9 +12,11 @@ export const Navbar = () => {
 
   const navLinks = [
     { to: "/user-dashboard", label: "Home", icon: Home },
-    { to: "/user-dashboard/order", label: "Order", icon: Package },
-    { to: "/user-dashboard/cart", label: "Cart", icon: ShoppingCart },
-    { to: "/user-dashboard/account", label: "Account", icon: User },
+    { to: "/order", label: "Order", icon: Package },
+    { to: "/cart", label: "Cart", icon: ShoppingCart },
+    { to: "/account", label: "Account", icon: User },
+    { to: "/market", label: "Market", icon: ShoppingCart },
+    { to: "/inbox", label: "Message", icon: Mail },
   ];
 
   return (

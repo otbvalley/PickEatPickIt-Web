@@ -12,10 +12,12 @@ import {
   Check,
   Heart,
   Star,
+  Mail,
 } from "lucide-react";
 import { Navbar } from "../../component/Navbar";
 import HeroFoodCarousel from "../../component/HeroFoodCarousel";
 import { Link } from "react-router-dom";
+import FoodScrollCarousel from "../component/FoodScrollCarouse";
 
 interface LikedState {
   [key: number]: boolean;
@@ -233,12 +235,24 @@ export default function UserDashboard() {
                 </div>
               </div>
               <div className="flex gap-2">
-                <button className="p-2.5 hover:bg-green-100 rounded-full transition-all duration-300 hover:scale-110">
-                  <Bell size={20} className="text-gray-600" />
-                </button>
-                <button className="p-2.5 hover:bg-green-100 rounded-full transition-all duration-300 hover:scale-110">
-                  <Check size={20} className="text-gray-600" />
-                </button>
+                <Link to="/notification">
+                  <button className="p-2 hover:bg-green-50 rounded-full transition-colors relative">
+                    <Bell
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                      fill="currentColor"
+                    />
+                    <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                  </button>
+                </Link>
+                <Link to="/inbox">
+                  <button className="p-2.5 hover:bg-green-100 rounded-full transition-all duration-300 hover:scale-110">
+                    <Mail
+                      size={20}
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-green-600"
+                    />
+                    <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -419,7 +433,7 @@ export default function UserDashboard() {
             </div>
           </div>
         </div>
-
+        <FoodScrollCarousel />
         {/* Restaurants Near You */}
         <div className="px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10">
           <h2 className="text-sm sm:text-base font-bold text-gray-800 mb-4 flex items-center gap-2 animate-slide-in-up">
