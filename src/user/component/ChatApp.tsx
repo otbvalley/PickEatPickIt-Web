@@ -330,7 +330,7 @@ export default function ChatApp() {
                 {/* <p className="text-xs text-green-100">Last Seen: Online</p>
                 <p className="text-xs text-green-200 italic">Typing</p> */}
               </div>
-              <button className="p-2">
+              <button className="p-2" onClick={() => activeChat}>
                 <Phone size={22} />
               </button>
             </div>
