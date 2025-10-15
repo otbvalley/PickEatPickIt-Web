@@ -12,9 +12,9 @@ export const Navbar = () => {
 
   const navLinks = [
     { to: "/user-dashboard", label: "Home", icon: Home },
-    { to: "/order", label: "Order", icon: Package },
+    { to: "/booking", label: "Order", icon: Package },
     { to: "/cart", label: "Cart", icon: ShoppingCart },
-    { to: "/account", label: "Account", icon: User },
+    { to: "/profile", label: "Account", icon: User },
     { to: "/market", label: "Market", icon: ShoppingCart },
     { to: "/inbox", label: "Message", icon: Mail },
   ];
