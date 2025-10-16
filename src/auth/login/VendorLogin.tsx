@@ -245,7 +245,7 @@ const VendorLogin = () => {
               <div className="text-center mt-6">
                 <p className="text-gray-600 text-sm sm:text-base">
                   New vendor?{" "}
-                  <Link to="/vendor-signup">
+                  <Link to="/welcome1">
                     <button className="text-green-600 font-bold hover:text-green-700 transition-colors hover:underline">
                       Create an account
                     </button>

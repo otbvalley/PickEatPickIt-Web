@@ -201,7 +201,7 @@ const SignUpPage = ({ onNavigate }: PageProps) => {
 
         <button
           className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors cursor-pointer "
-          onClick={() => onNavigate("login")}
+          onClick={() => onNavigate("profile1")}
         >
           Sign Up
         </button>
@@ -210,121 +210,6 @@ const SignUpPage = ({ onNavigate }: PageProps) => {
             <Button text="Select Role" />
           </div>
         </Link>
-      </div>
-    </div>
-  );
-};
-
-const LoginPage = ({ onNavigate }: PageProps) => {
-  const [showPassword, setShowPassword] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-md mx-auto px-6 py-8">
-        <div className="flex flex-col items-center mb-16">
-          <img src={logo} alt="" />
-          <h1 className="text-green-600 font-bold text-xl">PickEAT PickIT</h1>
-        </div>
-
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            Login Information
-          </h2>
-          <p className="text-gray-600 text-sm">
-            To continue, kindly provide the following details
-          </p>
-        </div>
-
-        <div className="space-y-4 mb-4">
-          <div className="relative">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2">
-              <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <input
-              type="email"
-              placeholder="E-mail address"
-              className="w-full pl-16 pr-4 py-3.5 border border-gray-300 rounded-lg text-green-600 placeholder-green-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-            />
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                />
-              </svg>
-            </div>
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Password"
-              className="w-full pl-12 pr-12 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              {showPassword ? (
-                <EyeOff className="w-5 h-5" />
-              ) : (
-                <Eye className="w-5 h-5" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        <div className="text-right mb-32">
-          <button
-            onClick={() => onNavigate("forgot")}
-            className="text-gray-600 text-sm hover:text-green-600"
-          >
-            Forget Password?
-          </button>
-        </div>
-        <Button text="Select Role" />
-        <div className="text-center mb-6">
-          <p className="text-gray-600 text-sm">
-            Don't have an account?{" "}
-            <button
-              onClick={() => onNavigate("signup")}
-              className="text-gray-900 font-semibold hover:text-green-600"
-            >
-              Sign up
-            </button>
-          </p>
-        </div>
-
-        <Link to="/vendor-signup">
-          <button className="text-gray-900 font-semibold hover:text-green-600">
-            Sign up
-          </button>
-        </Link>
-        <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-lg transition-colors">
-          Sign In
-        </button>
       </div>
     </div>
   );
@@ -495,7 +380,7 @@ const CreateProfile1 = ({ onNavigate }: PageProps) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-md mx-auto px-6 py-6">
+      <div className=" px-6 py-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold text-gray-900">Create Profile</h2>
           <button className="text-green-600 font-semibold text-sm">Skip</button>
@@ -654,7 +539,7 @@ const CreateProfile1 = ({ onNavigate }: PageProps) => {
 const CreateProfile2 = ({ onNavigate }: PageProps) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-md mx-auto px-6 py-6">
+      <div className=" px-6 py-6">
         <div className="flex items-center justify-between mb-6">
           <button onClick={() => onNavigate("profile1")}>
             <ArrowLeft className="w-6 h-6 text-gray-900" />
@@ -732,7 +617,7 @@ const SetAvailability = ({ onNavigate }: PageProps) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-md mx-auto px-6 py-6">
+      <div className=" px-6 py-6">
         <div className="flex items-center justify-between mb-6">
           <button onClick={() => onNavigate("profile2")}>
             <ArrowLeft className="w-6 h-6 text-gray-900" />
@@ -986,8 +871,7 @@ const VendorSignup = () => {
     switch (currentPage) {
       case "signup":
         return <SignUpPage onNavigate={setCurrentPage} />;
-      case "login":
-        return <LoginPage onNavigate={setCurrentPage} />;
+
       case "forgot":
         return <ForgotPasswordPage onNavigate={setCurrentPage} />;
       case "pin":

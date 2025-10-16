@@ -28,6 +28,14 @@ import ProfileEditForm from "./user/ProfileEditForm";
 import Support from "./user/Support";
 import WalletComponent from "./user/component/WalletComponent";
 import Booking from "./user/Booking";
+import OrdersManagement from "./vendor/pages/OrdersManagement";
+import Account from "./vendor/pages/Account";
+import ProfileSetting from "./vendor/pages/ProfileSetting";
+import OrderHistory from "./vendor/pages/OrderHistory";
+import SupportPage from "./vendor/pages/SupportPage";
+import DevicesAndSessions from "./vendor/pages/DevicesAndSessions";
+import RestaurantMenu from "./vendor/pages/RestaurantMenu";
+import EarningsPayment from "./vendor/pages/EarningsPayment";
 
 const AppRoutes = () => {
   return (
@@ -61,6 +69,14 @@ const AppRoutes = () => {
       <Route path="/welcome6" element={<Rider6 />} />
       <Route path="/vendor-signup" element={<VendorSignup />} />
       <Route path="/vendor-login" element={<VendorLogin />} />
+      <Route path="/order" element={<OrdersManagement />} />
+      <Route path="/vendor-profile" element={<Account />} />
+      <Route path="/ProfileSetting" element={<ProfileSetting />} />
+      <Route path="/orderhistory" element={<OrderHistory />} />
+      <Route path="/Support-vendor" element={<SupportPage />} />
+      <Route path="/DevicesSession" element={<DevicesAndSessions />} />
+      <Route path="/menu" element={<RestaurantMenu />} />
+      <Route path="/earning" element={<EarningsPayment />} />
     </Routes>
   );
 };
