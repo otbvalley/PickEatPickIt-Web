@@ -13,6 +13,7 @@ import {
   Award,
   TrendingUp,
   Crown,
+  Bell,
 } from "lucide-react";
 import { VendorNav } from "../component/VendorNav";
 import { Link } from "react-router-dom";
@@ -73,7 +74,7 @@ const Account = () => {
       color: "from-pink-500 to-pink-600",
       bgColor: "bg-pink-50",
       hoverColor: "hover:bg-pink-100",
-      sec: "ProfileSetting",
+      sec: "reviews",
     },
     {
       icon: Headphones,
@@ -110,6 +111,15 @@ const Account = () => {
         <div className="flex items-center justify-center">
           <h1 className="text-xl font-bold">Profile</h1>
         </div>
+        <Link to="/vendor-dashboard/smsg">
+          <button className="p-2 hover:bg-green-50 rounded-full transition-colors relative">
+            <Bell
+              className="w-5 h-5 sm:w-6 sm:h-6 text-white hover:text-green-600"
+              fill="currentColor"
+            />
+            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </button>
+        </Link>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 py-6">

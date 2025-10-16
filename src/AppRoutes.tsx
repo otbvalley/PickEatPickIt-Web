@@ -36,6 +36,8 @@ import SupportPage from "./vendor/pages/SupportPage";
 import DevicesAndSessions from "./vendor/pages/DevicesAndSessions";
 import RestaurantMenu from "./vendor/pages/RestaurantMenu";
 import EarningsPayment from "./vendor/pages/EarningsPayment";
+import ReviewsPage from "./vendor/pages/ReviewsPage";
+import NotificationsPage from "./vendor/pages/NotificationsPage";
 
 const AppRoutes = () => {
   return (
@@ -77,6 +79,8 @@ const AppRoutes = () => {
       <Route path="/DevicesSession" element={<DevicesAndSessions />} />
       <Route path="/menu" element={<RestaurantMenu />} />
       <Route path="/earning" element={<EarningsPayment />} />
+      <Route path="/reviews" element={<ReviewsPage />} />
+      <Route path="/smsg" element={<NotificationsPage />} />
     </Routes>
   );
 };

@@ -10,6 +10,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { VendorNav } from "../component/VendorNav";
+import { Link } from "react-router-dom";
 
 const VendorDashboard = () => {
   const [animateStats, setAnimateStats] = useState(false);
@@ -118,12 +119,14 @@ const VendorDashboard = () => {
             <h1 className="text-2xl font-bold">My Dashboard</h1>
             <p className="text-green-100 text-sm mt-1">Welcome back, Chef!</p>
           </div>
-          <div className="relative">
-            <Bell className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform" />
-            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center font-bold animate-pulse">
-              3
-            </span>
-          </div>
+          <Link to="/smsg">
+            <div className="relative">
+              <Bell className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform" />
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full text-xs flex items-center justify-center font-bold animate-pulse">
+                3
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
 
