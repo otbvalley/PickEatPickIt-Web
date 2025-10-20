@@ -21,13 +21,13 @@ export default function Select() {
       label: "Rider",
       icon: Bike,
       description: "Deliver orders efficiently",
-      row: "/user-home",
+      row: "/onboarding",
     },
     {
       label: "Admin",
       icon: Shield,
       description: "System administration",
-      row: "/user-home",
+      row: "/admin-login",
     },
   ];
   const navigate = useNavigate();

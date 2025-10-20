@@ -38,6 +38,22 @@ import RestaurantMenu from "./vendor/pages/RestaurantMenu";
 import EarningsPayment from "./vendor/pages/EarningsPayment";
 import ReviewsPage from "./vendor/pages/ReviewsPage";
 import NotificationsPage from "./vendor/pages/NotificationsPage";
+import OnboardingScreen from "./ride/rideWelcome/OnboardingScreen";
+import RiderRegistration from "./ride/rideWelcome/RiderRegistration";
+import RiderLogin from "./ride/login/RiderLogin";
+import RiderDashboard from "./ride/riderDasboard/RiderDashboard";
+import RiderOrder from "./ride/pages/RiderOrder";
+import FoodDeliveryMap from "./ride/pages/FoodDeliveryMap";
+import ProfileScreen from "./ride/pages/ProfileScreen";
+import DeliveryNotifications from "./ride/pages/DeliveryNotifications";
+import RiderProfileSettings from "./ride/pages/RiderProfileSettings";
+import DailyRiderApp from "./ride/pages/DailyRiderApp";
+import RiderEarningsPayment from "./ride/pages/RiderEarningsPayment";
+import RiderDevice from "./ride/pages/RiderDevice";
+import RiderSupport from "./ride/pages/RiderSupport";
+import SettingsScreen from "./ride/pages/SettingsScreen";
+import AdminDashboard from "./admin/dashboard/AdminDashboard";
+import AdminLogin from "./admin/login/AdminLogin";
 
 const AppRoutes = () => {
   return (
@@ -81,6 +97,27 @@ const AppRoutes = () => {
       <Route path="/earning" element={<EarningsPayment />} />
       <Route path="/reviews" element={<ReviewsPage />} />
       <Route path="/smsg" element={<NotificationsPage />} />
+
+      {/* rider */}
+      <Route path="/onboarding" element={<OnboardingScreen />} />
+      <Route path="/rider-login" element={<RiderLogin />} />
+      <Route path="/rider-registration" element={<RiderRegistration />} />
+      <Route path="/rider-dashboard" element={<RiderDashboard />} />
+      <Route path="/rider-order" element={<RiderOrder />} />
+      <Route path="/map" element={<FoodDeliveryMap />} />
+      <Route path="/rider-profile" element={<ProfileScreen />} />
+      <Route path="/rider-notifications" element={<DeliveryNotifications />} />
+      <Route path="*" element={<div>404 Not Found</div>} />
+      <Route path="/rider-profilesetting" element={<RiderProfileSettings />} />
+      <Route path="/daily-rider" element={<DailyRiderApp />} />
+      <Route path="/rider-earning" element={<RiderEarningsPayment />} />
+      <Route path="/rider-device" element={<RiderDevice />} />
+      <Route path="/rider-support" element={<RiderSupport />} />
+      <Route path="/rider-settings" element={<SettingsScreen />} />
+
+      {/* Admin section */}
+      <Route path="/admin-login" element={<AdminLogin />} />
+      <Route path="/admin-dashboard" element={<AdminDashboard />} />
     </Routes>
   );
 };
