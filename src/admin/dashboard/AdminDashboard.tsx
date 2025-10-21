@@ -25,6 +25,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import UserManagement from "../page/UserManagement";
+import Analysis from "../page/Analysis";
+import Transaction from "../page/Transaction";
+import Content from "../page/Content";
+import OrderManagement from "../page/OrderManagent";
+import Restrict from "../page/Restrict";
+import Help from "../page/Help";
 
 // Types
 type MenuItem = {
@@ -322,67 +328,19 @@ const AdminDashboard: React.FC = () => {
       case "dashboard":
         return <DashboardContent />;
       case "orders":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Order Management
-            </h2>
-            <p className="text-gray-600">Manage all your orders here.</p>
-          </div>
-        );
+        return <OrderManagement />;
       case "users":
         return <UserManagement />;
       case "earnings":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Earnings & Transaction
-            </h2>
-            <p className="text-gray-600">
-              View earnings and transaction history.
-            </p>
-          </div>
-        );
+        return <Transaction />;
       case "reports":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Reports & Analytics
-            </h2>
-            <p className="text-gray-600">
-              Generate reports and view analytics.
-            </p>
-          </div>
-        );
+        return <Analysis />;
       case "pages":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Pages & Restriction
-            </h2>
-            <p className="text-gray-600">
-              Manage pages and access restrictions.
-            </p>
-          </div>
-        );
+        return <Restrict />;
       case "content":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Content Management
-            </h2>
-            <p className="text-gray-600">Manage your content and media.</p>
-          </div>
-        );
+        return <Content />;
       case "help":
-        return (
-          <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Help & Support
-            </h2>
-            <p className="text-gray-600">Get help and contact support.</p>
-          </div>
-        );
+        return <Help />;
       default:
         return <DashboardContent />;
     }

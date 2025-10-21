@@ -45,7 +45,7 @@ export default function AdminLogin() {
                     className="w-20 h-20 mb-3"
                   />
                 </div>
-                <h2 className="text-3xl font-bold">FoodDash</h2>
+                <h2 className="text-3xl font-bold">PickEATPickIT</h2>
               </div>
               <p className="text-lg text-white/90">
                 Manage your food delivery empire with ease
