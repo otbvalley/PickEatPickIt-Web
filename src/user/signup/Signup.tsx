@@ -399,15 +399,18 @@ const SetDeliveryAddressScreen = ({
           },
         });
 
-        markerInstance.addListener("dragend", () => {
-          const pos = markerInstance.getPosition();
+  // Cast to the local GoogleMarker interface so TS recognizes addListener/getPosition/setPosition
+  const typedMarkerInstance = markerInstance as unknown as GoogleMarker;
+
+        typedMarkerInstance.addListener("dragend", () => {
+          const pos = typedMarkerInstance.getPosition();
           if (pos) {
             setLocation({ lat: pos.lat(), lng: pos.lng(), address: "" });
           }
         });
 
         mapInstanceRef.current = mapInstance;
-        markerInstanceRef.current = markerInstance;
+        markerInstanceRef.current = typedMarkerInstance;
 
         // Try to get user's location
         if (navigator.geolocation) {
@@ -419,7 +422,7 @@ const SetDeliveryAddressScreen = ({
               };
               setLocation({ ...pos, address: "" });
               mapInstance.setCenter(pos);
-              markerInstance.setPosition(pos);
+              markerInstanceRef.current?.setPosition(pos);
             },
             () => {
               // Use default Ikeja location if geolocation fails
